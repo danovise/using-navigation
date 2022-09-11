@@ -8,16 +8,15 @@
 import UIKit
 
 class MainVC: UIViewController, Storyboarded {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func showMainTabBarAction(_ sender: Any) {
         
         let vc = MainTabBarVC.instantiate()
-        
         self.present(vc, animated: true, completion: nil)
     }
     

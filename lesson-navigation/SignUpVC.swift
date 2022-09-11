@@ -8,14 +8,14 @@
 import UIKit
 
 class SignUpVC: UIViewController, Storyboarded {
-
+    
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var navigationToResetPasswordButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = "Регистрация"
         
     }
@@ -31,5 +31,4 @@ class SignUpVC: UIViewController, Storyboarded {
         
         self.navigationController?.pushViewController(resetPasswordVC, animated: true)
     }
-    
 }
