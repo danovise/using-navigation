@@ -8,10 +8,10 @@
 import UIKit
 
 class ResetPasswordVC: UIViewController, Storyboarded {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.hidesBackButton = true
         
         navigationItem.title = "Восстановить пароль"
@@ -21,15 +21,13 @@ class ResetPasswordVC: UIViewController, Storyboarded {
         
         self.navigationController?.popViewController(animated: true)
         
-      //  self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func finishAuthorizationAction(_ sender: Any) {
         
         UIView.transition(with: UIWindow.key, duration: 0.6, options: .transitionCrossDissolve) {
-        
-        UIWindow.key.rootViewController = MainVC.instantiate()
+            
+            UIWindow.key.rootViewController = MainVC.instantiate()
+        }
     }
-    
-}
 }

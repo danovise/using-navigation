@@ -8,9 +8,8 @@
 import UIKit
 
 class MainTabBarVC: UITabBarController, Storyboarded {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }

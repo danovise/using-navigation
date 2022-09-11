@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet weak var modalPresentationButton: UIButton!
     @IBOutlet weak var signUpView: UIView!
     @IBOutlet weak var resetPasswordView: UIView!
@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setupMainController()
+        setupMainController()
         setupSignUpController()
     }
     
@@ -32,17 +32,11 @@ class LoginVC: UIViewController {
     }
     
     func setupMainController() {
-        //создаем новый контроллер
-         let mainVC = MainVC.instantiate()
-         
-         //иерархия child
-         self.addChild(mainVC)
-         
-         self.mainView.addSubview(mainVC.view)
-         
-         //кладем наверх (в контейнер)
-         mainVC.didMove(toParent: self)
-    
+        
+        let mainVC = MainVC.instantiate()
+        self.addChild(mainVC)
+        self.mainView.addSubview(mainVC.view)
+        mainVC.didMove(toParent: self)
     }
     
     @IBAction func modalPresent(_ sender: Any) {
@@ -51,7 +45,6 @@ class LoginVC: UIViewController {
         signUpVC.modalPresentationStyle = .fullScreen
         
         let navVC = UINavigationController(rootViewController: signUpVC)
-        
         self.present(navVC, animated: true, completion: nil)
     }
 }
